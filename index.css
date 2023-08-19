@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
+#painel{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 10% 80% 10%;
+    background-color: aquamarine;
+    grid: column;
+    grid-template-areas: 
+    'header header header'
+    'nada main nada2'
+    'footer footer footer'
+    ;
+}
+.item{
+    text-align: center;
+}
+header{
+    background-color: black;
+    grid-area: header;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    height: 10vw;
+}
+main{
+    grid-area: main;
+    background-color: aqua;
+    height: 84vh;
+    overflow-y: hidden;
+}
+article{
+    background-color: orange;
+    margin: 10px;
+    height: 81vh;
+}
+footer{
+    background-color: black;
+    grid-area: footer;
+    height: 6vw;
+    color: white;
+}
+@keyframes meme{
+    0%{
+        background-image: url(imagens/WhatsApp\ Image\ 2023-08-19\ at\ 11.30.15.jpeg);
+    }
+    50%{
+        background-image: url(imagens/WhatsApp\ Image\ 2023-08-19\ at\ 11.30.15\ \(1\).jpeg);
+    }
+    75%{
+        background-image: url(imagens/WhatsApp\ Image\ 2023-08-19\ at\ 11.30.16.jpeg);
+    }
+    100%{
+        background-image: url(imagens/WhatsApp\ Image\ 2023-08-19\ at\ 11.30.15.jpeg);
+    }
+}
+#meme{
+    margin-top: 5%;
+    margin-left: 37%;
+    background-color: aquamarine;
+    width: 20vw;
+    height: 20vh;
+    animation: meme 3s;
+    animation-iteration-count: infinite;
+    background-size: cover;
+}
