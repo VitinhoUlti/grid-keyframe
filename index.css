@@ -19,6 +19,8 @@ html, body{
     grid: column;
     grid-template-areas: 
     'header header header'
+    "burger burger burger"
+    "nav nav nav"
     'nada main nada2'
     'footer footer footer'
     ;
@@ -33,6 +35,16 @@ header{
     text-align: center;
     font-size: 1.5em;
     height: 10vw;
+    overflow-y: hidden;
+}
+a{
+    color: white;
+    text-decoration: none;
+    background-color: rgb(46, 44, 44);
+}
+a:hover{
+    background-color: gray;
+    cursor: pointer;
 }
 main{
     grid-area: main;
@@ -48,8 +60,33 @@ article{
 footer{
     background-color: black;
     grid-area: footer;
-    height: 6vw;
+    height: 6vh;
     color: white;
+    overflow-y: hidden;
+}
+#burger{
+    grid-area: burger;
+    height: 8vh;
+    width: 100vw;
+    background-color: rgb(78, 76, 76);
+    text-align: center;
+    color: black;
+    font-size: 2em;
+}
+#burger:hover{
+    background-color: rgba(128, 128, 128, 0.945);
+    cursor: pointer;
+}
+#itens{
+    display: none;
+    grid-area: nav;
+    height: 10vh;
+    width: 100vw;
+    background-color: gray;
+    text-align: center;
+    color: black;
+    padding: 12px;
+    font-size: 1.5em;
 }
 @keyframes meme{
     0%{
@@ -85,5 +122,25 @@ footer{
 @media screen and (min-width: 1100px){
     #meme{
         margin-left: 35%;
+    }
+}
+@media screen and (min-height: 1px){
+    footer{
+        padding-bottom: px;
+        height: 12vh;
+    }
+}
+@media  screen and (min-width: 1px) {
+    header{
+        padding-bottom: 100px;
+        height: 12vh;
+    }
+}
+@media screen and (min-width: 425px) {
+    #burger{
+        display: none;
+    }
+    #itens{
+        display: none;
     }
 }
